@@ -1,0 +1,10 @@
+dataset:
+  source: figshare
+  figshare_doi: 10.6084/m9.figshare.14825193.v2
+  expected_root: data/raw/grazpedwri-dx
+  raw_dir: data/raw
+  interim_dir: data/interim
+  processed_dir: data/processed
+  splits_dir: data/splits
+  dry_run: true
+
