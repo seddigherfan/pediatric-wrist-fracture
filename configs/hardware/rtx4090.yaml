@@ -1,0 +1,8 @@
+hardware:
+  device: cuda:0
+  amp: true
+  workers: 8
+  cache: disk
+  deterministic: false
+  allow_cpu_training: false
+  require_gpu: true
