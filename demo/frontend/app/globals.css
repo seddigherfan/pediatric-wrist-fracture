@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --ink: #10233d;
+  --muted: #5f7189;
+  --line: #d8e2ef;
+  --accent: #145da0;
+  --accent-2: #38bdf8;
+  --success: #0f766e;
+  --warn: #c2410c;
+  --danger: #b91c1c;
+}
+
+html, body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Vazirmatn, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+a { color: inherit; text-decoration: none; }
+
