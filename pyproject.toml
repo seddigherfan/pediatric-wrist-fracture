@@ -1,0 +1,50 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "wrist-fracture"
+version = "0.1.0"
+description = "Research foundation for pediatric wrist fracture detection and localization."
+readme = "README.md"
+requires-python = ">=3.11,<3.15"
+license = { text = "MIT" }
+authors = [{ name = "OpenAI" }]
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "matplotlib>=3.8",
+  "scikit-learn>=1.4",
+  "pyyaml>=6.0.1",
+  "tqdm>=4.66",
+  "psutil>=5.9",
+  "opencv-python>=4.10",
+  "ultralytics>=8.3.0",
+  "fastapi>=0.115",
+  "uvicorn>=0.30",
+  "python-multipart>=0.0.9",
+  "pillow>=10.4",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3",
+  "ruff>=0.6",
+]
+
+[project.scripts]
+wrist-fracture-audit = "wrist_fracture.environment:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/wrist_fracture"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests", "scripts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
