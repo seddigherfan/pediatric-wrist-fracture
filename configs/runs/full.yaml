@@ -1,0 +1,13 @@
+run:
+  name: full
+  output_root: outputs/experiments
+  resume: false
+  save_period: 1
+  validation_split: val
+  test_split: test
+  allow_test_evaluation: false
+  selection_metric: metrics/mAP50-95(B)
+  repeated_runs: 1
+  batch_size_policy: fixed
+  batch_size: 64
+batch_size: 64
