@@ -1,0 +1,8 @@
+hardware:
+  device: cpu
+  amp: false
+  workers: 0
+  cache: ram
+  deterministic: true
+  allow_cpu_training: true
+  require_gpu: false
