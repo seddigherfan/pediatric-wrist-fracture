@@ -1,0 +1,48 @@
+experiment:
+  dataset:
+    yaml: data/processed/yolo/dataset.yaml
+    split_yaml: data/processed/yolo/dataset.yaml
+  model:
+    family: yolo26
+    checkpoint: yolo26n.pt
+    scale: n
+    task: detect
+    implementation: ultralytics
+    supports_training: true
+    requires_external_repo: false
+    nms_free_default: true
+  hardware:
+    device: cpu
+    amp: false
+    workers: 0
+    cache: ram
+    deterministic: true
+    allow_cpu_training: false
+    require_gpu: false
+  run:
+    name: phase3-prep
+    output_root: outputs/experiments
+    resume: false
+    save_period: 1
+    validation_split: val
+    test_split: test
+    allow_test_evaluation: false
+    selection_metric: metrics/mAP50-95(B)
+    repeated_runs: 1
+    batch_size_policy: fixed
+  image_size: 640
+  epochs: 100
+  patience: 20
+  seed: 42
+  pretrained: true
+  optimizer: auto
+  lr0: 0.01
+  lrf: 0.01
+  weight_decay: 0.0005
+  augmentation:
+    mosaic: 0.0
+    mixup: 0.0
+    hsv_h: 0.0
+    hsv_s: 0.0
+    hsv_v: 0.0
+

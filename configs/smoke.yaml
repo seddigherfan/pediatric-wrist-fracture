@@ -1,0 +1,7 @@
+smoke:
+  model: yolo26
+  image_size: 256
+  batch_size: 1
+  epochs: 1
+  device: cpu
+
